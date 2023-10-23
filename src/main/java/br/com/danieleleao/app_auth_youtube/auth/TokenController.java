@@ -30,6 +30,7 @@ public class TokenController {
         formData.add("username", user.username);
         formData.add("password", user.password);
         formData.add("grant_type", user.grantType);
+        formData.add("client_secret", user.clientSecret);
 
         HttpEntity<MultiValueMap<String, String>> entity
          = new HttpEntity<MultiValueMap<String,String>>(formData, headers);
@@ -39,6 +40,6 @@ public class TokenController {
         return result;
     }
 
-    public record User(String password, String clientId, String grantType, String username) {}
+    public record User(String password, String clientId, String grantType, String username, String clientSecret) {}
     
 }
