@@ -40,6 +40,6 @@ public class TokenController {
         return result;
     }
 
-    public record User(String password, String clientId, String grantType, String username) {}
+    public record User(String password, String clientId, String grantType, String username, String clientSecret) {}
     
 }
